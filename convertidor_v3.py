@@ -88,7 +88,7 @@ menu_tema.add_radiobutton(
     value=2,
     variable=tema_elegido,
     command=menu_tema_presionado,
-    # accelerator='Ctrl+o'
+    accelerator='Ctrl+o'
 
 )
 menu_opciones.add_cascade(menu=menu_tema, label="Tema")
@@ -158,6 +158,7 @@ tk.Button(app, text="Convertir", font=button_font, command=convertir, bg="#4caf5
 valor_label = tk.Label(app, text="Conversión", font=label_font, fg="#333333", relief='ridge', bd=1, padx=15, pady=15)
 valor_label.grid(row=4, column=0, columnspan=3, pady=10)
 
+#accelerator
 app.bind_all("<Control-c>", menu_tema_presionado)
-# app.bind_all("<Control-o>", menu_tema_presionado)
+app.bind_all("<Control-o>", menu_tema_presionado)
 app.mainloop()
